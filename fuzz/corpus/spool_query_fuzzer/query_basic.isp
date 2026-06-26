@@ -1,0 +1,23 @@
+INKSPOOL/1
+meta title "query"
+strings {
+  entry a = "alpha"
+  entry b = "beta"
+}
+styles {
+  style plain font main size 10 color #000000
+}
+pages {
+  page one width 320 height 200 background #ffffff
+}
+ops one {
+  layer root z 0 blend normal
+  anchor root origin at 0 0
+  text root style plain at 8 8 string a
+  text root style plain at 8 28 string b
+}
+xref {
+  alias first one origin
+}
+END
+

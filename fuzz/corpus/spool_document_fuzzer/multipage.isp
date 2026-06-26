@@ -1,0 +1,33 @@
+INKSPOOL/1
+meta title "multi"
+strings {
+  entry title = "Cover"
+  entry body = "A small page replay seed"
+  entry foot = "footer"
+}
+styles {
+  style base font main size 11 color #202428 flags regular
+  style title font display size 22 color #006d77 inherit base flags bold
+}
+pages {
+  page cover width 800 height 600 background #edf6f9 label "Cover"
+  page notes width 640 height 480 background #ffffff label "Notes"
+}
+ops cover {
+  layer root z 0 blend normal
+  text root style title at 40 40 string title
+  anchor root title_top at 40 40
+  attach root page notes anchor note_top
+}
+ops notes {
+  layer body z 0 blend normal
+  text body style base at 20 20 string body
+  anchor body note_top at 20 20
+  text body style base at 20 440 string foot
+}
+xref {
+  alias home cover title_top
+  alias note notes note_top
+}
+END
+

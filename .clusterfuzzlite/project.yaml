@@ -1,0 +1,10 @@
+language: c++
+fuzzing_engines:
+  - libfuzzer
+sanitizers:
+  - address
+  - undefined
+fuzz_targets:
+  - spool_document_fuzzer
+  - spool_query_fuzzer
+

@@ -1,0 +1,14 @@
+bin/
+obj/
+out/
+build/
+*.o
+*.obj
+*.exe
+*.pdb
+*.profraw
+*.profdata
+crash-*
+oom-*
+timeout-*
+

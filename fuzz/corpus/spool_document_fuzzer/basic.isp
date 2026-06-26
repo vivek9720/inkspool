@@ -1,0 +1,26 @@
+INKSPOOL/1
+meta title "basic"
+strings {
+  entry title = "Hello from inkspool"
+  entry caption = "deterministic capsule"
+}
+styles {
+  style base font main size 12 color #101820 flags regular
+  style accent font main size 16 color #da4167 inherit base flags bold
+}
+pages {
+  page cover width 640 height 480 background #f7f7f7 label "Cover"
+}
+ops cover {
+  layer root z 0 blend normal
+  text root style accent at 24 32 string title
+  anchor root headline at 24 32
+  defer root caption_anchor from headline dx 0 dy 30
+  box root style base rect 18 22 260 70
+  commit
+}
+xref {
+  alias start cover headline
+}
+END
+

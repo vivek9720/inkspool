@@ -1,0 +1,22 @@
+INKSPOOL/1
+meta title "xref"
+strings {
+  entry title = "xref seed"
+}
+styles {
+  style base font main size 12 color #101820
+}
+pages {
+  page index width 200 height 120 background #ffffff
+}
+ops index {
+  layer root z 0 blend normal
+  text root style base at 2 2 string title
+  anchor root here at 2 2
+}
+xref {
+  alias ok index here
+  alias missing index absent
+}
+END
+
